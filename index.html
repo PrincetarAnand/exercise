@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>My Book Fair</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include All CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <!-- End Include All CSS -->
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link
+        href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-end">
+                <a href="#" class="d-flex align-items-center brandUtility">
+                    Add Books
+                </a>
+            </div>
+        </div>
+        <!-- As a heading -->
+        <nav class="navbar bg-brand">
+            <div class="container">
+                <span class="navbar-brand mb-0 h1">Book Fair</span>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <div class="album py-5 ">
+            <div class="container">
+                <section class="authorInfo">
+                    <div class="container">
+                        <div class="row">
+                            <div class="box border-top d-flex justify-content-between">
+                                <div class="hgroup title" id="authorInfo">
+
+                                </div>
+                                <div class="dropdown">
+                                    <label for="sortBy">Sort by:</label>
+
+                                    <select name="sortBy" onchange="sortList('title')" id="sortByTitle">
+                                        <option default>Title</option>
+                                        <option value="asc">Asc</option>
+                                        <option value="desc">Desc</option>
+                                    </select>
+
+                                    <select name="sortBy" onchange="sortList('PublishDate')" id="sortByDate">
+                                        <option default>Published on</option>
+                                        <option value="asc">Asc</option>
+                                        <option value="desc">Desc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="row" id="posts">
+                    <div class="row" id="loading">
+                        <div class="col-md-6">
+                            <div class="card mb-6 shadow-sm" aria-hidden="true">
+                                <img src="https://images.placeholders.dev" class="card-img-top placeholder" alt="...">
+                                <div class="card-body">
+                                    <div class=" placeholder-glow">
+                                        <a href="#" class="placeholder col-8"></a>
+                                        <small class="text-muted placeholder col-4"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-6 shadow-sm" aria-hidden="true">
+                                <img src="https://images.placeholders.dev" class="card-img-top placeholder" alt="...">
+                                <div class="card-body">
+                                    <div class=" placeholder-glow">
+                                        <a href="#" class="placeholder col-8"></a>
+                                        <small class="text-muted placeholder col-4"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Api fetch script -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
